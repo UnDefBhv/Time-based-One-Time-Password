@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Time-based One-Time Password</title>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <main class="app">
+            <section class="card">
+                <header class="header">
+                    <div class="brand">
+                        <div class="brand-icon">
+                            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <rect x="5" y="10" width="14" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h1>Time-based One-Time Password</h1>
+                            <p>Generate a temporary 6-digit code.
+                        </p>
+                        </div>
+                    </div>
+                </header>
+                <div class="form">
+                    <label for="secret">Base32 secret
+                </label>
+                    <input id="secret" type="text" placeholder="Enter your Base32 secret" autocomplete="off" autocapitalize="characters" spellcheck="false">
+                    <p class="hint">Your secret should already be encoded in Base32.
+                </p>
+                    <button id="generate" type="button">Generate code
+                </button>
+                </div>
+                <section id="result" class="result hidden" aria-live="polite">
+                    <div class="result-header">
+                        <span>Current code</span>
+                        <span id="seconds" class="seconds">30s
+                    </span>
+                    </div>
+                    <div id="code" class="code"></div>
+                    <div class="timer">
+                        <div class="timer-track">
+                            <div id="progress"></div>
+                        </div>
+                    </div>
+                </section>
+                <p id="error" class="error hidden"></p>
+                <footer>
+                    <span>6 digits</span>
+                    <span>30 second interval</span>
+                </footer>
+            </section>
+        </main>
+        <script src="/app.js"></script>
+    </body>
+</html>
