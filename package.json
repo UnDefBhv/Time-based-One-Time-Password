@@ -1,3 +1,12 @@
 {
-    "type": "module"
+  "name": "totp",
+  "version": "1.0.0",
+  "description": "A simple and lightweight TOTP generator built with Node.js, HTML, CSS, and vanilla JavaScript.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "UnDefBhv",
+  "license": "Apache-2.0"
 }
