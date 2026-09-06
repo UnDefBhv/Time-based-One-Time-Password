@@ -1,6 +1,6 @@
 # TOTP Generator
 
-A simple and lightweight TOTP generator built with Node.js and vanilla JavaScript.
+A simple and lightweight TOTP generator built with Node.js, HTML, CSS, and vanilla JavaScript.
 
 ## Overview
 
