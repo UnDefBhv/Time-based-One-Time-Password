@@ -2,30 +2,66 @@
 
 A simple and lightweight TOTP generator built with Node.js, HTML, CSS, and vanilla JavaScript.
 
-## Overview
-
-TOTP Generator creates Time-based One-Time Passwords from a Base32 secret.
-
-TOTP codes are temporary 6-digit authentication codes that change every 30 seconds.
-
-The project uses Node.js native modules and does not require Express or other backend frameworks.
-
 ## Features
 
-- Generate 6-digit TOTP codes
-- 30-second code interval
-- Base32 secret support
-- HMAC-SHA1 based generation
-- Real-time countdown
-- Simple and responsive interface
-- No external frontend libraries
-- Node.js native `http` server
+* Generate 6-digit TOTP codes
+* 30-second code interval
+* Base32 secret support
+* HMAC-SHA1 based generation
+* Real-time countdown
+* Simple and responsive interface
+* No external frontend libraries
+* Uses Node.js native modules
+* No Express or backend frameworks
+
+## Requirements
+
+* Node.js 18 or newer
+
+## Usage
+
+Clone the repository:
+
+```bash
+git clone https://github.com/UnDefBhv/time-based-one-time-password
+cd totp
+```
+
+Start the server:
+
+```bash
+node server.js
+```
+
+Or use the npm script:
+
+```bash
+npm start
+```
+
+Open the application in your browser:
+
+```text
+http://localhost:3000
+```
+
+Enter a Base32 secret and click `Generate code`.
 
 ## Technologies
 
-- HTML
-- CSS
-- JavaScript
-- Node.js
-- Node.js `http`
-- Node.js `crypto`
+* HTML
+* CSS
+* JavaScript
+* Node.js
+* Node.js `http`
+* Node.js `crypto`
+
+## Security
+
+The project uses HMAC-SHA1 and time-based counters to generate temporary authentication codes.
+
+The Base32 secret is processed locally by the application and is not stored by the project.
+
+## License
+
+Licensed under the Apache License 2.0.
